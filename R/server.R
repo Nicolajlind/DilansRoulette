@@ -9,7 +9,7 @@ server_func <- function(input, output) {
 
   output$deltagere <- reactable::renderReactable({
     shiny::req(react_game_data())
-    .data <- react_game_data()
+    .data <- react_game_data() |> dplyr::select(-ID)
     reactable::reactable(
       .data,
       columns = list(
