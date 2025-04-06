@@ -1,0 +1,286 @@
+pizza_menu:
+  - nummer: 1
+    navn: VESUVIO
+    beskrivelse: tomatsauce, ost og skinke
+  - nummer: 2
+    navn: KEBAB
+    beskrivelse: tomatsauce, ost, kebab, salat og dressing
+  - nummer: 3
+    navn: KØBENHAVN
+    beskrivelse: tomatsauce, ost, pepperoni og champignon
+  - nummer: 4
+    navn: HAWAII
+    beskrivelse: tomatsauce, ost, skinke og ananas
+  - nummer: 5
+    navn: MARGHERITA
+    beskrivelse: tomatsauce og ost
+  - nummer: 6
+    navn: CAPRICCIOSA
+    beskrivelse: tomatsauce, ost, skinke og champignon
+  - nummer: 7
+    navn: ITALIANA
+    beskrivelse: tomatsauce, ost, kødsauce og løg
+  - nummer: 8
+    navn: TONNY SPECIAL
+    beskrivelse: tomatsauce, ost, pepperoni og ananas
+  - nummer: 9
+    navn: MILANO
+    beskrivelse: tomatsauce, ost, kebab og champignon
+  - nummer: 10
+    navn: NAPOLI
+    beskrivelse: tomatsauce, ost, kylling, salat og dressing
+  - nummer: 11
+    navn: PEP
+    beskrivelse: tomatsauce, ost og pepperoni
+  - nummer: 12
+    navn: ROMA
+    beskrivelse: tomatsauce, ost, kebab, grøn peber, champignon, fetaost, salat og dressing
+  - nummer: 13
+    navn: VEGETARIA
+    beskrivelse: tomatsauce, ost, champignon, paprika, artiskok og løg
+  - nummer: 14
+    navn: APOLLO
+    beskrivelse: tomatsauce, ost, kebab, løg og chili
+  - nummer: 15
+    navn: LA LUNA
+    beskrivelse: tomatsauce, ost, skinke, bacon, kebab og chili
+  - nummer: 16
+    navn: CALZONE
+    beskrivelse: (indbagt) tomatsauce, ost og skinke
+  - nummer: 17
+    navn: BALKAN
+    beskrivelse: tomatsauce, ost, friske tomater, rucola, pesto og oliven
+  - nummer: 18
+    navn: MATADOR
+    beskrivelse: tomatsauce, ost, kebab, løg og bearnaise
+  - nummer: 19
+    navn: MAMA MIA
+    beskrivelse: tomatsauce, ost, skinke og cocktailpølser
+  - nummer: 20
+    navn: GRÆSK
+    beskrivelse: tomatsauce, ost, fetaost, oliven, paprika, rucolasalat og pesto
+  - nummer: 21
+    navn: ORIENTALE
+    beskrivelse: tomatsauce, ost, cherrytomater, lufttørret skinke, rucola og pesto
+  - nummer: 22
+    navn: AMORE
+    beskrivelse: tomatsauce, ost, pepperoni, skinke og bacon
+  - nummer: 23
+    navn: PALERMO
+    beskrivelse: tomatsauce, ost, lufttørret skinke, artiskok og løg
+  - nummer: 24
+    navn: PARMA
+    beskrivelse: tomatsauce, ost, lufttørret skinke og gorgonzola
+  - nummer: 25
+    navn: MAMMA ROSA
+    beskrivelse: tomatsauce, ost, hakket kød, pepperoni og chili
+  - nummer: 26
+    navn: POMPEI
+    beskrivelse: tomatsauce, ost, skinke, løg og bacon
+  - nummer: 27
+    navn: DELA
+    beskrivelse: (indbagt) tomatsauce, ost, kødsauce og spaghetti
+  - nummer: 28
+    navn: DILAN
+    beskrivelse: tomatsauce, ost, tun og rejer
+  - nummer: 29
+    navn: VIKING
+    beskrivelse: tomatsauce, ost, kødboller, champignon og paprika
+  - nummer: 30
+    navn: GORGONZOLA
+    beskrivelse: tomatsauce, ost, kebab, gorgonzola og grøn peber
+  - nummer: 31
+    navn: CARLO
+    beskrivelse: tomatsauce, ost, skinke og pepperoni
+  - nummer: 32
+    navn: POLLO
+    beskrivelse: tomatsauce, ost, kylling og champignon
+  - nummer: 33
+    navn: RHODOS
+    beskrivelse: tomatsauce, ost, græsk bøf, paprika og løg
+  - nummer: 34
+    navn: PEPPERONI
+    beskrivelse: tomatsauce, ost, pepperoni og gorgonzola
+  - nummer: 35
+    navn: PARIS
+    beskrivelse: tomatsauce, ost, hakket kød, løg, jalapeños og hvidløg
+  - nummer: 36
+    navn: ORINO
+    beskrivelse: tomatsauce, ost, pepperoni, bacon og pølser
+  - nummer: 37
+    navn: BELLO
+    beskrivelse: tomatsauce, ost, kylling, fetaost, cherrytomater, rucola og pesto
+  - nummer: 38
+    navn: NEXUS
+    beskrivelse: tomatsauce, ost, bacon, kylling og pølser
+  - nummer: 39
+    navn: AMAZON
+    beskrivelse: tomatsauce, ost, kebab, grøn peber, bacon og hvidløg
+  - nummer: 41
+    navn: NEW MEXICO
+    beskrivelse: tomatsauce, ost, kylling, løg, paprika, jalapeños og tacosauce
+  - nummer: 42
+    navn: ATLANTIC
+    beskrivelse: tomatsauce, ost, kebab, paprika, løg, jalapeños, tacosauce og hvidløg
+  - nummer: 43
+    navn: DANISH
+    beskrivelse: tomatsauce, ost, kartofler, rucola, cherrytomater og pesto
+  - nummer: 44
+    navn: KARTOFFEL
+    beskrivelse: tomatsauce, ost, kartofler, kylling, cherrytomater, rucola og pesto
+  - nummer: 45
+    navn: ÅRHUS
+    beskrivelse: tomatsauce, ost, kartofler, hakket oksekød, løg, jalapeños, chili og hvidløg
+  - nummer: 46
+    navn: KRETA
+    beskrivelse: tomatsauce, ost, skinke, kylling, kebab, chili og hvidløg
+  - nummer: 47
+    navn: DURUM MIX
+    beskrivelse: kebab og kylling
+  - nummer: 48
+    navn: DURUM KEBAB
+    beskrivelse: 
+  - nummer: 49
+    navn: DURUM KYLLING
+    beskrivelse: 
+  - nummer: 50.1
+    navn: DURUM FALAFEL
+    beskrivelse: (50.A)
+  - nummer: 50
+    navn: DURUM GRÆSK BØF
+    beskrivelse: 
+  - nummer: 51
+    navn: BØRNE PIZZA
+    beskrivelse: tomatsauce, ost og skinke
+  - nummer: 52
+    navn: BØRNE PIZZA
+    beskrivelse: tomatsauce, ost og kødsauce
+  - nummer: 53
+    navn: BØRNE PIZZA
+    beskrivelse: tomatsauce, ost og pepperoni
+  - nummer: 54
+    navn: FISKEFILET
+    beskrivelse: med pommes frites og remoulade
+  - nummer: 162
+    navn: BØRNE CHICKEN DIPPER
+    beskrivelse: med pommes frites og remoulade
+  - nummer: 55
+    navn: LASAGNE
+    beskrivelse: med kødsauce
+  - nummer: 56
+    navn: LASAGNE
+    beskrivelse: med kødsauce, ost og gorgonzola
+  - nummer: 57
+    navn: LASAGNE
+    beskrivelse: med kødsauce og bacon
+  - nummer: 58
+    navn: SPAGHETTI BOLOGNESE
+    beskrivelse: med kødsauce
+  - nummer: 59
+    navn: CARBONARA SPAGHETTI
+    beskrivelse: med bacon, æg og flødesauce
+  - nummer: 60
+    navn: POMODORI SPAGHETTI
+    beskrivelse: med kylling, bacon, paprika og tomat-flødesauce
+  - nummer: 61
+    navn: LUCABNA SPAGHETTI
+    beskrivelse: med gorgonzola, kebab, champignon og fløde-tomatsauce
+  - nummer: 62
+    navn: A LA MATICA
+    beskrivelse: spaghetti med bacon, champignon og fløde-tomatsauce
+  - nummer: 69
+    navn: DILANS BURGER
+  - nummer: 70
+    navn: DILANS BURGER
+    beskrivelse: med ost
+  - nummer: 71
+    navn: DILANS BURGER
+    beskrivelse: med bacon
+  - nummer: 72
+    navn: DILANS BURGER
+    beskrivelse: med bacon og ost
+  - nummer: 73
+    navn: DOBBELT BURGER
+  - nummer: 74
+    navn: DOBBELT BURGER
+    beskrivelse: med ost
+  - nummer: 75
+    navn: DOBBELT BURGER
+    beskrivelse: med ost og bacon
+  - nummer: 76
+    navn: DOBBELT BURGER
+    beskrivelse: med bløde løg
+  - nummer: 77
+    navn: KYLLINGEBURGER
+    beskrivelse: med creme fraiche
+  - nummer: 78
+    navn: KYLLINGEBURGER
+    beskrivelse: med bacon og creme fraiche
+  - nummer: 79
+    navn: JAGT BURGER
+  - nummer: 80
+    navn: JAGT BURGER
+    beskrivelse: med ost
+  - nummer: 81
+    navn: JAGT BURGER
+    beskrivelse: med bacon
+  - nummer: 82
+    navn: JAGT BURGER
+    beskrivelse: med ost og bacon
+  - nummer: 83
+    navn: JAGT BURGER
+    beskrivelse: med ost, bacon og spejlæg
+  - nummer: 84
+    navn: JAGT BURGER
+    beskrivelse: (mexicansk) med chili og jalapeños
+  - nummer: 85
+    navn: JAGT BURGER
+    beskrivelse: med hjemmebagt brød
+  - nummer: 164
+    navn: JAGT DOBBELT BURGER
+  - nummer: 165
+    navn: JAGT BURGER
+    beskrivelse: med bløde løg og bearnaisesauce
+  - nummer: 86
+    navn: PITA KEBAB
+  - nummer: 87
+    navn: PITA KEBAB
+    beskrivelse: med bacon
+  - nummer: 88
+    navn: PITA KYLLING
+  - nummer: 89
+    navn: PITA KYLLING
+    beskrivelse: med bacon
+  - nummer: 90
+    navn: PITA GRÆSK BØF
+  - nummer: 91
+    navn: PITA FALAFEL
+  - nummer: 92
+    navn: PITA - VÆLG MELLEM
+    beskrivelse: Skinke / Tun / Rejer
+  - nummer: 105
+    navn: PITA MIX
+    beskrivelse: med kebab og kylling
+  - nummer: 93
+    navn: PIZZA SANDWICH KEBAB
+  - nummer: 94
+    navn: PIZZA SANDWICH KEBAB
+    beskrivelse: med bacon
+  - nummer: 95
+    navn: PIZZA SANDWICH KYLLING
+  - nummer: 96
+    navn: PIZZA SANDWICH KYLLING
+    beskrivelse: med bacon
+  - nummer: 97
+    navn: PIZZA SANDWICH GRÆSK BØF
+  - nummer: 98
+    navn: PIZZA SANDWICH FALAFEL
+  - nummer: 99
+    navn: PIZZA SANDWICH VÆLG MELLEM
+    beskrivelse: Skinke / Rejer / Pepperoni / Gorgonzola
+  - nummer: 100
+    navn: PIZZA SANDWICH MIX
+    beskrivelse: kebab og kylling
+  - nummer: 101
+    navn: PIZZA SANDWICH
+    beskrivelse: med pommes frites. Vælg mellem Kebab / Kylling / Falafel
