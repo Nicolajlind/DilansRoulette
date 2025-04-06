@@ -2,7 +2,7 @@
 ui_func <- function() {
   shinydashboardPlus::dashboardPage(
     header = shinydashboardPlus::dashboardHeader(),
-    sidebar = shinydashboardPlus::dashboardSidebar(disable = TRUE),  
+    sidebar = shinydashboardPlus::dashboardSidebar(disable = TRUE),
     body = shinydashboard::dashboardBody(
       shinyjs::useShinyjs(),
       shiny::fluidRow(
@@ -23,11 +23,12 @@ ui_func <- function() {
             shiny::fluidRow(
               shinydashboardPlus::box(
                 title = "Deltagere",
-                width = 6,
+                width = 10,
                 reactable::reactableOutput(outputId = "deltagere")
               )
             ),
             shiny::textOutput(outputId = "current_player"),
+            shiny::textOutput(outputId = "rolled_item"),
             shiny::actionButton(inputId = "roll", label = "Roll!"),
             shiny::actionButton(inputId = "keep", label = "Vælg"),
             shiny::actionButton(inputId = "reroll", label = "Reroll!")
