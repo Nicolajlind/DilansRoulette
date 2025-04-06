@@ -6,6 +6,14 @@
 \usage{
 server_func(input, output)
 }
+\arguments{
+\item{input}{internal}
+
+\item{output}{internal}
+}
+\value{
+Server-funktion til Dashboardet
+}
 \description{
 Serverdelen af dashboardet
 }

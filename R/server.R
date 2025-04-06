@@ -1,4 +1,7 @@
 #' @title Serverdelen af dashboardet
+#' @param input internal
+#' @param output internal
+#' @return Server-funktion til Dashboardet
 server_func <- function(input, output) {
   react_list_names <- shiny::reactiveVal(value = NULL)
   react_game_data <- shiny::reactiveVal(value = NULL)
@@ -36,7 +39,7 @@ server_func <- function(input, output) {
     shinyjs::hide(id = "navne")
     shinyjs::hide(id = "navneDone")
     shinyjs::hide(id = "keep")
-    shinyjs::hide(id = "reroll")
+    shinyjs::hide(id = "rerdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAbElEQVR4Xs2RQQrAMAgEfZgf7W9LAguybljJpR3wEse5JOL3ZObDb4x1loDhHbBOFU6i2Ddnw2KNiXcdAXygJlwE8OFVBHDgKrLgSInN4WMe9iXiqIVsTMjH7z/GhNTEibOxQswcYIWYOR/zAjBJfiXh3jZ6AAAAAElFTkSuQmCColl")
     shinyjs::show(id = "roll")
     react_list_names(names_vector)
     react_game_data(.data)
@@ -51,7 +54,7 @@ server_func <- function(input, output) {
       dplyr::filter(ID == id) |>
       dplyr::pull("person")
 
-    paste0("Nuværende spiller er: ", spiller)
+    paste0("Nuv\u00e6rende spiller er: ", spiller)
   })
 
   shiny::observeEvent(input$roll, {

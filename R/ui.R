@@ -30,7 +30,7 @@ ui_func <- function() {
             shiny::textOutput(outputId = "current_player"),
             shiny::textOutput(outputId = "rolled_item"),
             shiny::actionButton(inputId = "roll", label = "Roll!"),
-            shiny::actionButton(inputId = "keep", label = "Vælg"),
+            shiny::actionButton(inputId = "keep", label = "V\u00e6lg"),
             shiny::actionButton(inputId = "reroll", label = "Reroll!")
           )
         )
