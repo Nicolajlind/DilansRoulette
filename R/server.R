@@ -36,10 +36,12 @@ server_func <- function(input, output) {
       forsog = rep(0, length(names_vector)),
       valgt = rep("", length(names_vector))
     ) |> dplyr::mutate(ID = dplyr::row_number(), .before = 1L)
+
     shinyjs::hide(id = "navne")
     shinyjs::hide(id = "navneDone")
     shinyjs::hide(id = "keep")
     shinyjs::show(id = "roll")
+
     react_list_names(names_vector)
     react_game_data(.data)
     react_player_id(1)
@@ -76,8 +78,6 @@ server_func <- function(input, output) {
     } else {
       shinyjs::enable(id = "keep")
     }
-
-
   })
 
   shiny::observeEvent(input$keep, {
@@ -93,8 +93,10 @@ server_func <- function(input, output) {
     .data$forsog[.data$ID == spiller_id] <- 1 + .data$forsog[.data$ID == spiller_id]
     .data$valgt[.data$ID == spiller_id] <- react_current_menu_item()
     react_game_data(.data)
+
     next_player <- pick_next(current_id = spiller_id, game_info = .data)
     react_player_id(next_player)
+
     shiny::req(react_player_id())
     shinyjs::show(id = "roll")
   })
@@ -110,8 +112,10 @@ server_func <- function(input, output) {
     .data <- react_game_data()
     .data$forsog[.data$ID == spiller_id] <- 1 + .data$forsog[.data$ID == spiller_id]
     react_game_data(.data)
+
     next_player <- pick_next(current_id = spiller_id, game_info = .data)
     react_player_id(next_player)
+
     shiny::req(react_player_id())
     shinyjs::show(id = "roll")
   })
