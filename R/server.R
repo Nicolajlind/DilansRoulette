@@ -39,7 +39,6 @@ server_func <- function(input, output) {
     shinyjs::hide(id = "navne")
     shinyjs::hide(id = "navneDone")
     shinyjs::hide(id = "keep")
-    shinyjs::hide(id = "rerdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAbElEQVR4Xs2RQQrAMAgEfZgf7W9LAguybljJpR3wEse5JOL3ZObDb4x1loDhHbBOFU6i2Ddnw2KNiXcdAXygJlwE8OFVBHDgKrLgSInN4WMe9iXiqIVsTMjH7z/GhNTEibOxQswcYIWYOR/zAjBJfiXh3jZ6AAAAAElFTkSuQmCColl")
     shinyjs::show(id = "roll")
     react_list_names(names_vector)
     react_game_data(.data)
@@ -59,13 +58,26 @@ server_func <- function(input, output) {
 
   shiny::observeEvent(input$roll, {
     shinyjs::hide(id = "roll")
+    shiny::req(react_game_data())
+    id <- react_player_id()
+    no_rolls <- react_game_data() |>
+      dplyr::filter(ID == !!id) |>
+      dplyr::pull(forsog)
 
     rolled_no <- sample(menukort$nummer, size = 1)
     tekst <- menu_desc(rolled_no)
     react_current_menu_item(tekst)
+
+    shinyjs::show(id = "keep")
     shinyjs::show(id = "rolled_item")
     shinyjs::show(id = "reroll")
-    shinyjs::show(id = "keep")
+    if(no_rolls == 0){
+      shinyjs::disable(id = "keep")
+    } else {
+      shinyjs::enable(id = "keep")
+    }
+
+
   })
 
   shiny::observeEvent(input$keep, {
