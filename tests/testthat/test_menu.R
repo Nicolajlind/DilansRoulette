@@ -1,4 +1,4 @@
-testthat::test_that("Dilansmenu", {
+testthat::test_that("Dilansmenu loads as expected", {
   testthat::expect_no_error(dilans_menu())
 
   menu <- dilans_menu()

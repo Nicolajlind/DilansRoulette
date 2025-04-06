@@ -3,6 +3,7 @@ server_func <- function(input, output) {
   react_list_names <- shiny::reactiveVal(value = NULL)
   react_game_data <- shiny::reactiveVal(value = NULL)
   react_current_menu_item <- shiny::reactiveVal(value = NULL)
+  react_player_id <- shiny::reactiveVal(value = NULL)
 
   menukort <- dilans_menu()
 
@@ -39,31 +40,13 @@ server_func <- function(input, output) {
     shinyjs::show(id = "roll")
     react_list_names(names_vector)
     react_game_data(.data)
+    react_player_id(1)
   })
 
-  react_next_player_id <- shiny::reactive({
-    shiny::req(react_game_data())
-    antal_spins <- input$reroll + input$keep
-    active_ids <- react_game_data() |>
-      dplyr::filter(valgt == "") |> dplyr::pull(ID)
-
-    next_id <- 1 + antal_spins %% length(active_ids)
-    active_ids[next_id]
-  })
-
-  react_current_player_id <- shiny::reactive({
-    shiny::req(react_game_data())
-    antal_spins <- input$reroll + input$keep - 1
-    active_ids <- react_game_data() |>
-      dplyr::filter(valgt == "") |> dplyr::pull(ID)
-
-    next_id <- 1 + antal_spins %% length(active_ids)
-    active_ids[next_id]
-  })
 
   output$current_player <- shiny::renderText({
-    shiny::req(react_next_player_id())
-    id <- react_next_player_id()
+    shiny::req(react_player_id())
+    id <- react_player_id()
     spiller <- react_game_data() |>
       dplyr::filter(ID == id) |>
       dplyr::pull("person")
@@ -85,33 +68,37 @@ server_func <- function(input, output) {
 
   shiny::observeEvent(input$keep, {
     shiny::req(react_game_data())
-    shiny::req(react_current_player_id())
+    shiny::req(react_player_id())
     shiny::req(react_current_menu_item())
     shinyjs::hide(id = "rolled_item")
     shinyjs::hide(id = "reroll")
     shinyjs::hide(id = "keep")
 
-    spiller_id <- react_current_player_id()
+    spiller_id <- react_player_id()
     .data <- react_game_data()
     .data$forsog[.data$ID == spiller_id] <- 1 + .data$forsog[.data$ID == spiller_id]
     .data$valgt[.data$ID == spiller_id] <- react_current_menu_item()
     react_game_data(.data)
-    shiny::req(react_next_player_id())
+    next_player <- pick_next(current_id = spiller_id, game_info = .data)
+    react_player_id(next_player)
+    shiny::req(react_player_id())
     shinyjs::show(id = "roll")
   })
 
   shiny::observeEvent(input$reroll, {
     shiny::req(react_game_data())
-    shiny::req(react_current_player_id())
+    shiny::req(react_player_id())
     shinyjs::hide(id = "rolled_item")
     shinyjs::hide(id = "reroll")
     shinyjs::hide(id = "keep")
 
-    spiller_id <- react_current_player_id()
+    spiller_id <- react_player_id()
     .data <- react_game_data()
     .data$forsog[.data$ID == spiller_id] <- 1 + .data$forsog[.data$ID == spiller_id]
     react_game_data(.data)
-    shiny::req(react_next_player_id())
+    next_player <- pick_next(current_id = spiller_id, game_info = .data)
+    react_player_id(next_player)
+    shiny::req(react_player_id())
     shinyjs::show(id = "roll")
   })
 
