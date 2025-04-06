@@ -58,8 +58,7 @@ server_func <- function(input, output) {
     shinyjs::hide(id = "roll")
 
     rolled_no <- sample(menukort$nummer, size = 1)
-    menu_entry <- menukort |> dplyr::filter(nummer == rolled_no)
-    tekst <- paste0("NO: ", menu_entry$nummer, ": ", menu_entry$navn, " - ", menu_entry$beskrivelse)
+    tekst <- menu_desc(rolled_no)
     react_current_menu_item(tekst)
     shinyjs::show(id = "rolled_item")
     shinyjs::show(id = "reroll")
